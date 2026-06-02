@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texas AgriScience, LLC | Professional Agriculture Research</title>
+<meta name="description" content="Texas AgriScience, LLC — Professional agriculture research, consultation, statistical analysis, and plant breeding services in Lyford, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232D6A4F'/%3E%3Cpath d='M32 12c-4.4 0-8 3.6-8 8v20h4V22c0-2.2 1.8-4 4-4s4 1.8 4 4v18h4V20c0-4.4-3.6-8-8-8z' fill='%2395B46A'/%3E%3Cpath d='M18 44h28v4H18zm4-6h20v4H22z' fill='%23A3C585'/%3E%3C/svg%3E">
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1a1a2e;background:#f8f6f3;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+.section-label{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#5c6b4f;margin-bottom:8px}
+.section-title{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;color:#1b4332;margin-bottom:16px;line-height:1.2}
+.section-sub{font-size:1.05rem;color:#4a5568;max-width:680px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:8px;font-weight:600;font-size:.95rem;border:none;cursor:pointer;transition:all .25s ease;font-family:inherit}
+.btn-primary{background:#2d6a4f;color:#fff}
+.btn-primary:hover{background:#1b4332;transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,106,79,.3)}
+.btn-outline{background:transparent;color:#2d6a4f;border:2px solid #2d6a4f}
+.btn-outline:hover{background:#2d6a4f;color:#fff}
+
+/* ===== Navigation ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(248,246,243,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(45,106,79,.1);transition:all .3s ease}
+nav.scrolled{background:rgba(248,246,243,.98);box-shadow:0 2px 20px rgba(0,0,0,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;color:#1b4332}
+.nav-logo svg{width:32px;height:32px;flex-shrink:0}
+.nav-links{display:none;gap:8px}
+.nav-links a{padding:8px 14px;border-radius:6px;font-size:.9rem;font-weight:500;color:#4a5568;transition:all .2s ease}
+.nav-links a:hover{color:#2d6a4f;background:rgba(45,106,79,.08)}
+.nav-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:1001}
+.nav-toggle span{display:block;width:26px;height:2.5px;background:#1b4332;border-radius:2px;transition:all .3s ease}
+.nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* Mobile menu */
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#f8f6f3;z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity .3s ease}
+.mobile-menu.open{display:flex;opacity:1}
+.mobile-menu a{font-size:1.25rem;font-weight:500;color:#1b4332;padding:14px 32px;border-radius:8px;transition:background .2s}
+.mobile-menu a:hover{background:rgba(45,106,79,.08)}
+
+@media(min-width:768px){
+.nav-links{display:flex}
+.nav-toggle{display:none}
+.mobile-menu{display:none!important}
+}
+
+/* ===== Hero ===== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#1b4332 0%,#2d6a4f 40%,#3a7d5e 100%);padding-top:80px}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 800'%3E%3Cpath d='M0 600c120-40 240-80 360-60s240 60 360 40 240-60 360-80 240 0 360 40v260H0z' fill='rgba(255,255,255,.04)'/%3E%3C/svg%3E") center bottom/cover no-repeat;pointer-events:none}
+.hero-grid{display:grid;gap:48px;align-items:center;position:relative;z-index:1}
+.hero-content{text-align:center}
+.hero-badge{display:inline-block;background:rgba(149,180,106,.2);color:#c5d9a0;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 20px;border-radius:100px;margin-bottom:24px;border:1px solid rgba(149,180,106,.25)}
+.hero h1{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px}
+.hero h1 span{color:#95b46a}
+.hero p{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,.78);max-width:600px;line-height:1.7;margin:0 auto 36px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+
+@media(min-width:768px){
+.hero-grid{grid-template-columns:1fr 1fr;gap:60px}
+.hero-content{text-align:left}
+.hero p{margin:0 0 36px}
+.hero-btns{justify-content:flex-start}
+}
+
+/* ===== About ===== */
+.about{background:#fff}
+.about-grid{display:grid;gap:40px;align-items:center}
+.about-visual{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.about-visual>div{border-radius:12px;overflow:hidden;background:#e8ede4;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;padding:24px}
+.about-visual svg{width:80%;height:80%;max-width:160px;opacity:.7}
+.about-visual .tall{grid-row:span 2;aspect-ratio:3/4}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.stat-card{text-align:center;padding:20px;border-radius:10px;background:#f8f6f3}
+.stat-num{font-size:1.8rem;font-weight:800;color:#2d6a4f}
+.stat-label{font-size:.8rem;color:#5c6b4f;font-weight:500;margin-top:4px}
+
+@media(min-width:768px){
+.about-grid{grid-template-columns:1fr 1fr}
+}
+
+/* ===== Services ===== */
+.services{background:#f8f6f3}
+.services-header{text-align:center;margin-bottom:56px}
+.services-header .section-sub{margin:0 auto}
+.services-grid{display:grid;gap:24px;grid-template-columns:1fr}
+.service-card{background:#fff;border-radius:14px;padding:36px 28px;transition:all .3s ease;border:1px solid rgba(45,106,79,.08);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#2d6a4f,#95b46a);opacity:0;transition:opacity .3s}
+.service-card:hover::before{opacity:1}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(45,106,79,.1);border-color:rgba(45,106,79,.15)}
+.service-icon{width:52px;height:52px;border-radius:12px;background:#e8ede4;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.service-icon svg{width:26px;height:26px;color:#2d6a4f}
+.service-card h3{font-size:1.2rem;font-weight:700;color:#1b4332;margin-bottom:10px}
+.service-card p{font-size:.93rem;color:#4a5568;line-height:1.65}
+.service-card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.service-card .tags span{font-size:.74rem;font-weight:500;color:#5c6b4f;background:#f0f2ed;padding:4px 12px;border-radius:100px}
+
+@media(min-width:640px){
+.services-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:992px){
+.services-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+/* ===== Why Us ===== */
+.why{background:#fff}
+.why-header{text-align:center;margin-bottom:56px}
+.why-header .section-sub{margin:0 auto}
+.why-grid{display:grid;gap:32px;grid-template-columns:1fr}
+.why-card{display:flex;gap:20px;align-items:flex-start;padding:24px;border-radius:12px;transition:background .3s}
+.why-card:hover{background:#f8f6f3}
+.why-icon{width:44px;height:44px;border-radius:10px;background:#e8ede4;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{width:22px;height:22px;color:#2d6a4f}
+.why-card h3{font-size:1.05rem;font-weight:700;color:#1b4332;margin-bottom:6px}
+.why-card p{font-size:.9rem;color:#4a5568;line-height:1.6}
+
+@media(min-width:640px){
+.why-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:992px){
+.why-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ===== Contact ===== */
+.contact{background:linear-gradient(135deg,#1b4332 0%,#2d6a4f 100%);color:#fff}
+.contact .section-title{color:#fff}
+.contact .section-sub{color:rgba(255,255,255,.75)}
+.contact-grid{display:grid;gap:48px}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-item{display:flex;align-items:flex-start;gap:14px}
+.contact-item svg{width:22px;height:22px;color:#95b46a;flex-shrink:0;margin-top:2px}
+.contact-item div{font-size:.95rem;color:rgba(255,255,255,.85);line-height:1.6}
+.contact-item strong{display:block;color:#fff;font-weight:600;margin-bottom:2px}
+.contact-form{background:rgba(255,255,255,.08);border-radius:14px;padding:32px;border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(4px)}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.85rem;font-weight:500;color:rgba(255,255,255,.8);margin-bottom:8px}
+.form-group input,.form-group textarea,.form-group select{width:100%;padding:14px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.1);color:#fff;font-size:.95rem;font-family:inherit;transition:all .25s ease}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.4)}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{outline:none;border-color:#95b46a;background:rgba(255,255,255,.15);box-shadow:0 0 0 3px rgba(149,180,106,.2)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-group select{color:#fff;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(255,255,255,.5)'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px}
+.form-group select option{color:#1a1a2e;background:#fff}
+.contact-form .btn-primary{background:#95b46a;color:#1b4332;width:100%;justify-content:center;padding:16px}
+.contact-form .btn-primary:hover{background:#a8c77a;box-shadow:0 8px 24px rgba(149,180,106,.3);transform:translateY(-2px)}
+.form-note{font-size:.78rem;color:rgba(255,255,255,.5);text-align:center;margin-top:16px}
+
+@media(min-width:768px){
+.contact-grid{grid-template-columns:1fr 1.2fr}
+.contact-form{padding:40px}
+}
+
+/* ===== Footer ===== */
+footer{background:#0f261b;color:rgba(255,255,255,.65);padding:48px 0 32px}
+.footer-inner{display:grid;gap:32px}
+.footer-brand .nav-logo{color:#95b46a;margin-bottom:12px}
+.footer-brand p{font-size:.88rem;line-height:1.7;max-width:380px}
+.footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.footer-col h4{color:#fff;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.footer-col a{display:block;font-size:.88rem;color:rgba(255,255,255,.6);padding:4px 0;transition:color .2s}
+.footer-col a:hover{color:#95b46a}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;margin-top:40px;display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center;font-size:.82rem;color:rgba(255,255,255,.4)}
+
+@media(min-width:640px){
+.footer-inner{grid-template-columns:1.5fr 1fr}
+.footer-links{grid-template-columns:repeat(3,1fr)}
+.footer-bottom{flex-direction:row;justify-content:space-between}
+}
+
+/* ===== Utilities ===== */
+@media(max-width:639px){
+section{padding:56px 0}
+}
+
+/* ===== Back to top ===== */
+.back-top{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:#2d6a4f;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(20px);transition:all .3s ease;z-index:900;box-shadow:0 4px 16px rgba(45,106,79,.3)}
+.back-top.visible{opacity:1;transform:translateY(0)}
+.back-top:hover{background:#1b4332;transform:translateY(-3px)}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+<div class="container nav-inner">
+<a href="#home" class="nav-logo" aria-label="Texas AgriScience home">
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="8" fill="#2D6A4F"/><path d="M32 12c-4.4 0-8 3.6-8 8v20h4V22c0-2.2 1.8-4 4-4s4 1.8 4 4v18h4V20c0-4.4-3.6-8-8-8z" fill="#95B46A"/><path d="M18 44h28v4H18zm4-6h20v4H22z" fill="#A3C585"/></svg>
+<span>Texas AgriScience</span>
+</a>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#contact">Contact</a>
+</div>
+<button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+<a href="#about" class="mobile-link">About</a>
+<a href="#services" class="mobile-link">Services</a>
+<a href="#why" class="mobile-link">Why Us</a>
+<a href="#contact" class="mobile-link">Contact</a>
+</div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<section id="home" class="hero" aria-label="Hero">
+<div class="container hero-grid">
+<div class="hero-content">
+<div class="hero-badge">Professional Agriculture Research</div>
+<h1>Advancing Agriculture <span>Through Science</span></h1>
+<p>Texas AgriScience, LLC delivers precision research, statistical rigor, and expert plant breeding services to help growers and agribusinesses thrive in an evolving landscape.</p>
+<div class="hero-btns">
+<a href="#services" class="btn btn-primary">Explore Services</a>
+<a href="#contact" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.5)">Get in Touch</a>
+</div>
+</div>
+<div style="display:none" aria-hidden="true"></div>
+</div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="about" aria-label="About Texas AgriScience">
+<div class="container">
+<div class="about-grid">
+<div>
+<div class="section-label">About Us</div>
+<h2 class="section-title">Where Research Meets the Field</h2>
+<p class="section-sub">Based in Lyford, Texas, Texas AgriScience, LLC is a professional agricultural research firm dedicated to advancing crop science through rigorous methodology, customized consultation, and hands-on expertise. We partner with growers, seed companies, and agribusinesses to deliver actionable insights that drive real results.</p>
+<div class="about-stats">
+<div class="stat-card">
+<div class="stat-num">15+</div>
+<div class="stat-label">Years Experience</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">200+</div>
+<div class="stat-label">Research Trials</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">50+</div>
+<div class="stat-label">Partner Farms</div>
+</div>
+</div>
+</div>
+<div class="about-visual">
+<div><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 10c-4 0-7 3-7 7v40H28c-5 0-9 4-9 9v4h62v-4c0-5-4-9-9-9H57V17c0-4-3-7-7-7z" fill="#95B46A" opacity=".5"/><circle cx="50" cy="22" r="6" fill="#2D6A4F" opacity=".7"/><rect x="34" y="46" width="32" height="6" rx="3" fill="#2D6A4F" opacity=".6"/></svg></div>
+<div class="tall"><svg viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="10" width="40" height="100" rx="4" fill="#2D6A4F" opacity=".15"/><rect x="38" y="20" width="24" height="80" rx="3" fill="#95B46A" opacity=".4"/><circle cx="50" cy="35" r="8" fill="#2D6A4F" opacity=".5"/><rect x="42" y="50" width="16" height="4" rx="2" fill="#2D6A4F" opacity=".4"/><rect x="42" y="60" width="16" height="4" rx="2" fill="#2D6A4F" opacity=".4"/><rect x="42" y="70" width="16" height="4" rx="2" fill="#2D6A4F" opacity=".4"/></svg></div>
+<div><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 70c0-11 9-20 20-20h20c11 0 20 9 20 20v10H20V70z" fill="#95B46A" opacity=".4"/><rect x="35" y="36" width="30" height="20" rx="4" fill="#2D6A4F" opacity=".5"/><circle cx="50" cy="44" r="5" fill="#95B46A"/></svg></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== Services ===== -->
+<section id="services" class="services" aria-label="Our Services">
+<div class="container">
+<div class="services-header">
+<div class="section-label">What We Offer</div>
+<h2 class="section-title">Comprehensive Research Services</h2>
+<p class="section-sub">From field trial design to advanced statistical modeling, we provide end-to-end research support tailored to the unique challenges of modern agriculture.</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+<h3>Consultation</h3>
+<p>Strategic research consultation covering trial design, protocol development, regulatory compliance, and crop management planning. We help you ask the right questions and design studies that produce meaningful answers.</p>
+<div class="tags"><span>Protocol Design</span><span>Regulatory</span><span>Crop Planning</span></div>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+<h3>Statistical Analysis</h3>
+<p>Rigorous statistical modeling and data interpretation using SAS, R, and ARM. Services include ANOVA, mixed models, spatial analysis, meta-analysis, and customized reporting for publication or regulatory submission.</p>
+<div class="tags"><span>ANOVA</span><span>Mixed Models</span><span>SAS / R</span><span>ARM</span></div>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/></svg></div>
+<h3>Plant Breeding</h3>
+<p>Expert plant breeding services including germplasm evaluation, line development, hybrid testing, marker-assisted selection, and variety trial management across multiple environments and geographies.</p>
+<div class="tags"><span>Germplasm</span><span>Hybrid Testing</span><span>Marker Selection</span><span>Variety Trials</span></div>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22V8l6-4 6 4v14"/><path d="M10 22V12"/><path d="M14 22V2"/><path d="M18 22V10l4-2v14"/></svg></div>
+<h3>Field Trials</h3>
+<p>Full-service field trial management including site selection, plot layout, planting, maintenance, data collection, and harvest. We manage replicated trials with rigorous quality control from planting through analysis.</p>
+<div class="tags"><span>Plot Layout</span><span>Data Collection</span><span>Quality Control</span><span>Harvest</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== Why Us ===== -->
+<section id="why" class="why" aria-label="Why Texas AgriScience">
+<div class="container">
+<div class="why-header">
+<div class="section-label">Why Texas AgriScience</div>
+<h2 class="section-title">Rigor, Relevance, &amp; Results</h2>
+<p class="section-sub">We combine deep scientific expertise with practical field experience to deliver research that stands up to scrutiny and drives real-world impact.</p>
+</div>
+<div class="why-grid">
+<div class="why-card">
+<div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+<div><h3>Scientific Rigor</h3><p>Every trial and analysis follows established scientific protocols with proper replication, randomization, and statistical power to ensure reliable, defensible results.</p></div>
+</div>
+<div class="why-card">
+<div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<div><h3>Decades of Experience</h3><p>With over 15 years in agricultural research, our team brings deep institutional knowledge across crops, regions, and regulatory environments — from the Rio Grande Valley and beyond.</p></div>
+</div>
+<div class="why-card">
+<div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+<div><h3>Client-Focused Partnership</h3><p>We work as an extension of your team — listening carefully, communicating clearly, and tailoring our approach to your specific goals, timelines, and budget.</p></div>
+</div>
+<div class="why-card">
+<div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg></div>
+<div><h3>Cutting-Edge Tools</h3><p>We leverage modern analytical platforms including SAS, R, ARM, and GIS tools to provide deep insights from complex agricultural datasets.</p></div>
+</div>
+<div class="why-card">
+<div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+<div><h3>Deeply Local</h3><p>Headquartered in Lyford, TX, we understand the soils, climate, and challenges of the Lower Rio Grande Valley — and how they translate to grower outcomes.</p></div>
+</div>
+<div class="why-card">
+<div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+<div><h3>Publication-Ready Reporting</h3><p>All deliverables include comprehensive documentation, clear methodology, and professionally formatted reports suitable for internal decisions, regulatory submissions, or peer-reviewed publication.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="contact" aria-label="Contact Us">
+<div class="container">
+<div class="section-label" style="color:rgba(149,180,106,.9)">Get in Touch</div>
+<h2 class="section-title">Let's Start a Conversation</h2>
+<p class="section-sub">Ready to elevate your research program? Reach out and we'll discuss how Texas AgriScience can support your next project.</p>
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<div><strong>Location</strong>Lyford, TX 78569</div>
+</div>
+<div class="contact-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+<div><strong>Phone</strong><a href="tel:+19563308385" style="color:inherit">(956) 330-8385</a></div>
+</div>
+<div class="contact-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<div><strong>Email</strong><a href="mailto:info@texasagriscience.com" style="color:inherit">info@texasagriscience.com</a></div>
+</div>
+<div class="contact-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+<div><strong>Current Site</strong><a href="http://www.texasagriscience.com/" target="_blank" rel="noopener" style="color:#95b46a">www.texasagriscience.com</a></div>
+</div>
+</div>
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+<input type="hidden" name="subject" value="New inquiry from Texas AgriScience website">
+<input type="hidden" name="from_name" value="Texas AgriScience Website">
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" placeholder="Your name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" placeholder="you@example.com" required>
+</div>
+<div class="form-group">
+<label for="phone">Phone (optional)</label>
+<input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+</div>
+<div class="form-group">
+<label for="service">Service Interest</label>
+<select id="service" name="service">
+<option value="">Select a service...</option>
+<option value="consultation">Consultation</option>
+<option value="statistical-analysis">Statistical Analysis</option>
+<option value="plant-breeding">Plant Breeding</option>
+<option value="field-trials">Field Trials</option>
+<option value="other">Other / Not sure</option>
+</select>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Tell us about your project or research needs..." required></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send Message</button>
+<p class="form-note">We typically respond within one business day.</p>
+</form>
+</div>
+</div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer aria-label="Site footer">
+<div class="container footer-inner">
+<div class="footer-brand">
+<a href="#home" class="nav-logo" style="color:#95b46a">
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="64" height="64" rx="8" fill="#2D6A4F"/><path d="M32 12c-4.4 0-8 3.6-8 8v20h4V22c0-2.2 1.8-4 4-4s4 1.8 4 4v18h4V20c0-4.4-3.6-8-8-8z" fill="#95B46A"/><path d="M18 44h28v4H18zm4-6h20v4H22z" fill="#A3C585"/></svg>
+<span>Texas AgriScience, LLC</span>
+</a>
+<p>Professional agriculture research, consultation, statistical analysis, and plant breeding services based in Lyford, Texas.</p>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Services</h4>
+<a href="#services">Consultation</a>
+<a href="#services">Statistical Analysis</a>
+<a href="#services">Plant Breeding</a>
+<a href="#services">Field Trials</a>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<a href="#about">About Us</a>
+<a href="#why">Why Texas AgriScience</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<a href="tel:+19563308385">(956) 330-8385</a>
+<a href="mailto:info@texasagriscience.com">info@texasagriscience.com</a>
+<a href="http://www.texasagriscience.com/" target="_blank" rel="noopener">Current Site</a>
+</div>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>&copy; 2026 Texas AgriScience, LLC. All rights reserved.</span>
+<span>Lyford, TX 78569</span>
+</div>
+</footer>
+
+<!-- ===== Back to Top ===== -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+// Mobile menu toggle
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.getElementById('mobileMenu');
+const links = document.querySelectorAll('.mobile-link');
+toggle.addEventListener('click',()=>{
+const open=menu.classList.toggle('open');
+toggle.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open);
+document.body.style.overflow=open?'hidden':'';
+});
+links.forEach(l=>l.addEventListener('click',()=>{
+menu.classList.remove('open');
+toggle.classList.remove('active');
+toggle.setAttribute('aria-expanded','false');
+document.body.style.overflow='';
+}));
+
+// Navbar scroll effect
+const navbar=document.getElementById('navbar');
+let lastScroll=0;
+window.addEventListener('scroll',()=>{
+const y=window.scrollY;
+navbar.classList.toggle('scrolled',y>60);
+lastScroll=y;
+},{passive:true});
+
+// Back to top button
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+backTop.classList.toggle('visible',window.scrollY>400);
+},{passive:true});
+backTop.addEventListener('click',()=>{
+window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>

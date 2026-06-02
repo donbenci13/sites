@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kova Fertilizer Inc. – Trusted Agribusiness Solutions</title>
+<meta name="description" content="Kova Fertilizer Inc. – Your trusted partner in agribusiness. Fertilizer manufacturing, crop nutrition, and agribusiness solutions since 1946.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232D6A2E'/%3E%3Ctext x='32' y='44' font-size='36' font-weight='800' font-family='Inter,Arial,sans-serif' text-anchor='middle' fill='%23fff'%3EK%3C/text%3E%3C/svg%3E">
+<style>
+/* ===== RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1a2e1a;background:#f8faf5;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:#2d6a2e;text-decoration:none;transition:color .2s}
+a:hover{color:#1a4a1b}
+ul{list-style:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* ===== COLORS ===== */
+:root{
+  --green-900:#0f2b0f;
+  --green-800:#1a4a1b;
+  --green-700:#2d6a2e;
+  --green-600:#3d8b3e;
+  --green-500:#4ea34f;
+  --green-100:#e6f3e6;
+  --green-50:#f0f7ef;
+  --cream:#faf8f0;
+  --gold:#c8972e;
+  --gold-light:#e8c76a;
+  --text:#1a2e1a;
+  --text-light:#4a6a4a;
+  --white:#ffffff;
+  --gray-100:#f5f5f0;
+  --gray-200:#e2e2d8;
+  --shadow:0 4px 24px rgba(15,43,15,.08);
+  --shadow-lg:0 8px 40px rgba(15,43,15,.12);
+}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-200);transition:box-shadow .3s}
+nav.scrolled{box-shadow:var(--shadow)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;color:var(--green-800)}
+.nav-logo svg{flex-shrink:0}
+.nav-links{display:flex;gap:8px}
+.nav-links a{padding:8px 16px;border-radius:8px;font-size:.88rem;font-weight:500;color:var(--text);transition:background .2s,color .2s}
+.nav-links a:hover{background:var(--green-100);color:var(--green-700)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:24px;height:2.5px;background:var(--green-800);border-radius:2px;transition:all .3s}
+.nav-toggle.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+@media(max-width:768px){
+  .nav-toggle{display:flex}
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:rgba(255,255,255,.98);flex-direction:column;padding:16px 20px;gap:4px;border-bottom:1px solid var(--gray-200);transform:translateY(-120%);opacity:0;transition:all .35s ease;pointer-events:none}
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-links a{padding:12px 16px;font-size:1rem}
+}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(135deg,var(--green-900) 0%,var(--green-800) 40%,var(--green-700) 100%);overflow:hidden;padding:120px 0 80px}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:720px}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);padding:6px 18px;border-radius:100px;font-size:.82rem;font-weight:500;color:var(--gold-light);margin-bottom:24px;border:1px solid rgba(255,255,255,.1)}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:20px;letter-spacing:-.02em}
+.hero h1 span{color:var(--gold-light)}
+.hero p{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,.8);max-width:560px;margin-bottom:36px;line-height:1.7}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:12px;font-weight:600;font-size:.95rem;border:none;cursor:pointer;transition:all .25s}
+.btn-primary{background:var(--gold);color:var(--green-900)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,151,46,.35)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.3)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:40px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.1)}
+.hero-stat h3{font-size:2rem;font-weight:800;color:var(--white)}
+.hero-stat p{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:0}
+@media(max-width:768px){
+  .hero{padding:100px 0 60px;text-align:center}
+  .hero p{margin-left:auto;margin-right:auto}
+  .hero-actions{justify-content:center}
+  .hero-stats{justify-content:center;gap:24px;flex-wrap:wrap}
+}
+
+/* ===== SECTION HEADERS ===== */
+.section{padding:96px 0}
+.section-dark{background:var(--green-900);color:var(--white)}
+.section-cream{background:var(--cream)}
+.section-white{background:var(--white)}
+.section-gray{background:var(--gray-100)}
+.section-header{text-align:center;max-width:700px;margin:0 auto 56px}
+.section-header h2{font-size:clamp(1.6rem,4vw,2.5rem);font-weight:800;color:var(--green-900);letter-spacing:-.02em;margin-bottom:14px}
+.section-header p{color:var(--text-light);font-size:1.05rem;line-height:1.7}
+.section-dark .section-header h2{color:var(--white)}
+.section-dark .section-header p{color:rgba(255,255,255,.65)}
+.section-tag{display:inline-block;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--green-600);margin-bottom:10px}
+.section-dark .section-tag{color:var(--gold-light)}
+
+/* ===== ABOUT ===== */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-image{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,var(--green-600),var(--green-800))}
+.about-image-inner{display:flex;align-items:center;justify-content:center;height:100%;padding:40px;text-align:center;color:var(--white)}
+.about-image-inner svg{opacity:.3;position:absolute}
+.about-image-inner p{position:relative;z-index:1;font-size:1.1rem;font-weight:500;max-width:280px;line-height:1.6}
+.about-content h3{font-size:1.8rem;font-weight:700;color:var(--green-800);margin-bottom:20px}
+.about-content p{color:var(--text-light);margin-bottom:16px;font-size:1.02rem}
+.about-content .about-values{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.about-content .about-values li{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:500;color:var(--text);padding:10px 14px;background:var(--green-50);border-radius:10px}
+.about-content .about-values li::before{content:'✓';color:var(--green-600);font-weight:700;font-size:1rem}
+@media(max-width:768px){
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-image{aspect-ratio:16/9}
+  .about-content .about-values{grid-template-columns:1fr}
+}
+
+/* ===== PRODUCTS ===== */
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.product-card{background:var(--white);border-radius:16px;padding:36px 28px;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s;border:1px solid var(--gray-200)}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.product-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:1.4rem}
+.product-card h3{font-size:1.15rem;font-weight:700;color:var(--green-800);margin-bottom:10px}
+.product-card p{font-size:.9rem;color:var(--text-light);line-height:1.6}
+@media(max-width:768px){
+  .products-grid{grid-template-columns:1fr;gap:20px}
+}
+@media(min-width:769px)and(max-width:1024px){
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ===== WHY KOVA ===== */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.why-card{background:rgba(255,255,255,.06);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:36px 28px;transition:transform .3s,background .3s}
+.why-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.why-card .icon{font-size:2rem;margin-bottom:16px;display:block}
+.why-card h3{font-size:1.1rem;font-weight:700;margin-bottom:12px;color:var(--white)}
+.why-card p{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.6}
+@media(max-width:768px){
+  .why-grid{grid-template-columns:1fr}
+}
+
+/* ===== CONTACT ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.contact-info h3{font-size:1.4rem;font-weight:700;color:var(--green-800);margin-bottom:24px}
+.contact-item{display:flex;gap:16px;margin-bottom:24px}
+.contact-item-icon{width:48px;height:48px;border-radius:12px;background:var(--green-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.2rem}
+.contact-item h4{font-size:.92rem;font-weight:600;color:var(--green-800);margin-bottom:2px}
+.contact-item p,.contact-item a{font-size:.92rem;color:var(--text-light)}
+.contact-item a:hover{color:var(--green-700)}
+.contact-form{background:var(--white);border-radius:16px;padding:36px;box-shadow:var(--shadow);border:1px solid var(--gray-200)}
+.contact-form .form-group{margin-bottom:18px}
+.contact-form label{display:block;font-size:.85rem;font-weight:600;color:var(--green-800);margin-bottom:6px}
+.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:12px 16px;border:2px solid var(--gray-200);border-radius:10px;font-family:'Inter',sans-serif;font-size:.92rem;color:var(--text);transition:border-color .2s;background:var(--white);outline:none}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{border-color:var(--green-500)}
+.contact-form textarea{min-height:120px;resize:vertical}
+.contact-form .btn-primary{width:100%;justify-content:center;padding:16px;font-size:1rem}
+.form-note{font-size:.8rem;color:var(--text-light);text-align:center;margin-top:12px}
+@media(max-width:768px){
+  .contact-grid{grid-template-columns:1fr;gap:32px}
+  .contact-form{padding:24px 20px}
+}
+
+/* ===== FOOTER ===== */
+footer{background:var(--green-900);color:rgba(255,255,255,.7);padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-brand .nav-logo{color:var(--white);margin-bottom:12px}
+.footer-brand p{font-size:.9rem;line-height:1.7;max-width:360px}
+.footer-col h4{font-size:.92rem;font-weight:700;color:var(--white);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{color:rgba(255,255,255,.6);font-size:.88rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--gold-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;font-size:.84rem}
+.footer-bottom a{color:rgba(255,255,255,.6)}
+.footer-bottom a:hover{color:var(--gold-light)}
+@media(max-width:768px){
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* ===== UTILITY ===== */
+.highlight{color:var(--gold)}.text-center{text-align:center}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar" role="navigation">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" aria-label="Kova Fertilizer Home">
+      <svg width="36" height="36" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <rect width="64" height="64" rx="12" fill="#2D6A2E"/>
+        <text x="32" y="44" font-size="36" font-weight="800" font-family="Inter,Arial,sans-serif" text-anchor="middle" fill="#fff">K</text>
+      </svg>
+      KOVA
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#why-kova">Why Kova</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <span class="hero-badge">Est. 1946 · Greensburg, IN</span>
+    <h1>Trusted Agribusiness <span>Solutions</span> for Generations</h1>
+    <p>Kova Fertilizer Inc. delivers premium crop nutrition, expert agronomic guidance, and supply chain reliability to farms and cooperatives across the Midwest.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <a href="#products" class="btn btn-outline">Our Products</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <h3>75+</h3>
+        <p>Years in Business</p>
+      </div>
+      <div class="hero-stat">
+        <h3>500+</h3>
+        <p>Partner Farms</p>
+      </div>
+      <div class="hero-stat">
+        <h3>6</h3>
+        <p>Regional Locations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section section-white" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <div class="about-image-inner">
+          <svg width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M30 80 L50 20 L70 80" stroke="rgba(255,255,255,.15)" stroke-width="2" fill="none"/>
+            <circle cx="50" cy="50" r="35" stroke="rgba(255,255,255,.1)" stroke-width="1.5" fill="none"/>
+            <path d="M20 70 Q50 10 80 70" stroke="rgba(255,255,255,.1)" stroke-width="1.5" fill="none"/>
+          </svg>
+          <p>Friends &amp; Families · Business &amp; Resource · Farming &amp; Future</p>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-tag">About Us</span>
+        <h3>The KOVA Agribusiness Team</h3>
+        <p>For over seven decades, Kova Fertilizer Inc. has been a cornerstone of Midwest agriculture. Founded in Greensburg, Indiana, we've grown from a single fertilizer supplier into a diversified agribusiness team serving farmers across multiple states.</p>
+        <p>The KOVA Agribusiness Team (KAT) provides a unique network of support — from crop fertility specialists and agribusiness finance to wholesale supply and retail solutions. We believe one solution doesn't fit every operation, so we offer a collaborative team approach rooted in proven values.</p>
+        <ul class="about-values">
+          <li>Family-owned legacy</li>
+          <li>Agronomic expertise</li>
+          <li>Reliable supply chain</li>
+          <li>Community partnership</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS / SERVICES ===== -->
+<section class="section section-gray" id="products">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">What We Offer</span>
+      <h2>Products &amp; Services</h2>
+      <p>From crop nutrients to financial solutions, the KAT network delivers everything you need to thrive.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-icon" style="background:#e6f3e6;color:#2d6a2e;">🌱</div>
+        <h3>Crop Fertility</h3>
+        <p>Customized nutrient management programs with precision application — NPK, micronutrients, and soil health solutions tailored to your fields.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#fef6e0;color:#c8972e;">💰</div>
+        <h3>Agribusiness Finance</h3>
+        <p>Flexible financing options for inputs, equipment, and operating expenses through our dedicated ag finance division.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#e6f0ff;color:#2d6a2e;">🚜</div>
+        <h3>KOVA Retail</h3>
+        <p>Full-service retail locations offering seed, crop protection products, fertilizer, and expert agronomic advice at the local level.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#f0e6ff;color:#2d6a2e;">🏭</div>
+        <h3>Wholesale Supply</h3>
+        <p>Bulk fertilizer distribution and logistics serving cooperatives and dealers across the region with reliable, on-time delivery.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#e6fff0;color:#2d6a2e;">🔬</div>
+        <h3>Fields of Vision</h3>
+        <p>Data-driven agronomy services including soil sampling, yield mapping, satellite imagery analysis, and variable-rate recommendations.</p>
+      </div>
+      <div class="product-card">
+        <div class="product-icon" style="background:#fff0e6;color:#2d6a2e;">🤝</div>
+        <h3>KOVA of Ohio &amp; More</h3>
+        <p>Regional operating divisions serving Indiana, Ohio, and surrounding states — Next Generation, Heartland Ag, and KOVA Silgas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY KOVA ===== -->
+<section class="section section-dark" id="why-kova">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Why Kova</span>
+      <h2>Built on Trust, Rooted in Results</h2>
+      <p>We've earned our reputation by putting farmers first and delivering where it matters most.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="icon">🌾</span>
+        <h3>Decades of Expertise</h3>
+        <p>Generations of hands-on agronomic experience give our team an unmatched understanding of Midwest soils, crops, and growing conditions.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">🤲</span>
+        <h3>Farmer-First Philosophy</h3>
+        <p>Every recommendation starts with your operation's unique goals — we don't offer one-size-fits-all solutions, only personalized, profitable strategies.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">🔗</span>
+        <h3>Integrated Supply Chain</h3>
+        <p>From wholesale procurement to retail delivery, our vertical integration means fewer middlemen, better pricing, and dependable availability.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">📊</span>
+        <h3>Data-Driven Agronomy</h3>
+        <p>Our Fields of Vision program combines precision technology with boots-on-the-ground scouts to deliver actionable field intelligence.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">🏡</span>
+        <h3>Family-Run Independence</h3>
+        <p>As an independent, family-owned business, we make decisions quickly, invest locally, and answer directly to the communities we serve.</p>
+      </div>
+      <div class="why-card">
+        <span class="icon">⭐</span>
+        <h3>Unwavering Reliability</h3>
+        <p>Through market volatility, weather challenges, and supply chain disruptions — Kova delivers. Our customers count on us season after season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section section-white" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Contact</span>
+      <h2>Let's Talk About Your Operation</h2>
+      <p>Reach out to our team for pricing, agronomic advice, or to find a Kova location near you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <h4>Headquarters</h4>
+            <p>1330 N Anderson St<br>Greensburg, IN 47240</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+18003461569">(800) 346-1569</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:kovagreensburg@ekova.com">kovagreensburg@ekova.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div>
+            <h4>Office Hours</h4>
+            <p>Mon – Fri: 7:30 AM – 5:00 PM EST<br>Closed major holidays</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="hidden" name="subject" value="New inquiry from KovaFertilizer.com">
+        <input type="hidden" name="from_name" value="Kova Website Contact">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required placeholder="John Miller">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="john@farm.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option value="">Select a topic…</option>
+            <option value="Crop Fertility">Crop Fertility / Nutrients</option>
+            <option value="Ag Finance">Agribusiness Finance</option>
+            <option value="Wholesale">Wholesale Supply</option>
+            <option value="Retail">Retail Products</option>
+            <option value="Fields of Vision">Fields of Vision / Agronomy</option>
+            <option value="General">General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your operation and how we can help…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-note">We'll respond within 1 business day. No spam, ever.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" aria-label="Kova Fertilizer Home">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <rect width="64" height="64" rx="10" fill="#2D6A2E"/>
+            <text x="32" y="44" font-size="36" font-weight="800" font-family="Inter,Arial,sans-serif" text-anchor="middle" fill="#fff">K</text>
+          </svg>
+          KOVA
+        </a>
+        <p>Trusted agribusiness solutions since 1946. The KOVA Agribusiness Team is dedicated to your profitability — friends &amp; families, business &amp; resource, farming &amp; future.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why-kova">Why Kova</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+18003461569">(800) 346-1569</a></li>
+          <li><a href="mailto:kovagreensburg@ekova.com">Email Us</a></li>
+          <li><a href="https://maps.google.com/?q=1330+N+Anderson+St+Greensburg+IN+47240" target="_blank" rel="noopener">1330 N Anderson St<br>Greensburg, IN 47240</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Kova Fertilizer Inc. All rights reserved.</span>
+      <span>Built for the future of farming.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+// Sticky nav shadow
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
+
+// Mobile menu toggle
+const toggle=document.getElementById('navToggle');
+const links=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>{
+  const open=links.classList.toggle('open');
+  toggle.classList.toggle('open');
+  toggle.setAttribute('aria-expanded',open);
+});
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+  });
+});
+
+// Smooth scroll for anchor links (fallback)
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const href=a.getAttribute('href');
+    if(href==='#')return;
+    const target=document.querySelector(href);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth'});
+    }
+  });
+});
+</script>
+</body>
+</html>
