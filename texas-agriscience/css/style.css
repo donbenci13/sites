@@ -1,0 +1,93 @@
+:root{
+  --green-900:#173b2f;
+  --green-800:#1f4d3c;
+  --green-700:#2d6a4f;
+  --green-500:#5b7b4f;
+  --green-100:#e2ecdf;
+  --sage:#95b46a;
+  --cream:#f8f6f3;
+  --white:#fff;
+  --text:#1e2a25;
+  --text-soft:#4e5e57;
+  --border:#d4e0d8;
+  --shadow:0 8px 28px rgba(15,43,33,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}ul{list-style:none}
+.container{width:min(1160px,92%);margin:0 auto}
+
+.site-nav{position:sticky;top:0;z-index:20;background:rgba(248,246,243,.95);border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
+.site-nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.nav-wrap{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;color:var(--green-900);font-weight:700}
+.brand img{height:42px;width:auto;max-width:min(240px,58vw);object-fit:contain;border-radius:0;background:transparent}
+.nav-toggle{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer}
+.nav-links{display:flex;gap:8px}
+.nav-links a{padding:8px 12px;border-radius:8px;color:var(--text-soft);font-weight:500}
+.nav-links a:hover,.nav-links a.active{background:#e9efe9;color:var(--green-800)}
+
+.hero{background:linear-gradient(135deg,var(--green-900),var(--green-700));color:#fff;padding:96px 0 86px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center}
+.hero-badge{display:inline-block;background:rgba(149,180,106,.2);border:1px solid rgba(149,180,106,.35);padding:6px 12px;border-radius:999px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:16px 0}
+.hero h1 span{color:#cde2ab}
+.hero p{color:rgba(255,255,255,.82)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:10px;font-weight:600;border:0;cursor:pointer}
+.btn-primary{background:var(--sage);color:var(--green-900)}
+.btn-outline{border:2px solid rgba(255,255,255,.4);color:#fff}
+.placeholder{background:linear-gradient(145deg,#d9e8df,#edf4ef);border:1px dashed #b5cbbf;min-height:260px;border-radius:14px;display:grid;place-items:center;text-align:center;color:#55786a;padding:16px}
+.hero-media{border-radius:14px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.28)}
+.hero-media img{width:100%;min-height:280px;max-height:420px;object-fit:cover}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.split-grid.reverse .split-media{order:-1}
+.split-grid .btn-primary{margin-top:16px}
+.media-frame{border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.media-frame img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.family-banner{border-radius:14px;overflow:hidden;margin-bottom:28px;box-shadow:var(--shadow)}
+.family-banner img{width:100%;max-height:440px;object-fit:cover;object-position:center 30%}
+.team-card{padding:0;overflow:hidden}
+.team-card img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top}
+.team-card .team-body{padding:20px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.photo-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+.contact-aside{border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.contact-aside img{width:100%;height:100%;min-height:340px;object-fit:cover}
+
+section{padding:72px 0}
+.section-head{margin-bottom:28px}
+.section-kicker{text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;font-weight:700;color:var(--green-500)}
+.section-title{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2;margin-top:8px}
+.section-sub{max-width:740px;color:var(--text-soft)}
+.cards-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.cards-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+.card h3{color:var(--green-800);margin-bottom:8px}
+.card p{font-size:.94rem;color:var(--text-soft)}
+.card ul{list-style:disc;padding-left:18px;color:var(--text-soft)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:24px}
+.contact-list{display:grid;gap:14px}
+.contact-item strong{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--green-800)}
+.contact-item a{color:var(--green-700)}
+.form{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px}
+.note{font-size:.82rem;color:var(--text-soft);margin-bottom:12px}
+.field{margin-bottom:12px}.field label{display:block;font-size:.84rem;font-weight:600;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;border:1px solid #c5d5cb;background:#fff;border-radius:10px;padding:11px 12px;font:inherit}
+.field textarea{min-height:120px;resize:vertical}
+
+.site-footer{background:#10281d;color:rgba(255,255,255,.72);padding:38px 0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
+.site-footer h4{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:9px}
+.site-footer a{display:block;padding:3px 0}
+.site-footer a:hover{color:#fff}
+.footer-bottom{margin-top:20px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem}
+
+@media(max-width:980px){.cards-4{grid-template-columns:1fr 1fr}.cards-3{grid-template-columns:1fr 1fr}.hero-grid,.split-grid{grid-template-columns:1fr}.split-grid.reverse .split-media{order:0}.photo-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){
+  .nav-toggle{display:block}
+  .nav-links{position:absolute;left:0;right:0;top:70px;background:var(--cream);padding:10px 4%;display:none;flex-direction:column;border-bottom:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .cards-4,.cards-3,.contact-grid,.footer-grid,.photo-grid{grid-template-columns:1fr}
+}
