@@ -1,429 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Agriflite Services Inc | Agricultural Services Since 1973 — Wakarusa, IN</title>
-<meta name="description" content="Agriflite Services Inc — Trusted agricultural services in Wakarusa, Indiana since 1973. Over 50 years of experience serving the farming community.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232D6A4F' rx='6'/%3E%3Cpath d='M16 4L6 14h4v10h4v-6h4v6h4V14h4L16 4z' fill='%23D4A373'/%3E%3C/svg%3E">
-<style>
-/* ===== RESET & BASE ===== */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#1a1a1a;background:#F8F6F1;line-height:1.6;font-size:16px}
-img{max-width:100%;height:auto;display:block}
-a{color:inherit;text-decoration:none}
-ul{list-style:none}
-.container{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
-
-/* ===== COLORS ===== */
-:root{--green-dark:#1B4332;--green:#2D6A4F;--green-med:#40916C;--green-light:#95D5B2;--green-pale:#D8F3DC;--accent:#D4A373;--accent-dark:#BC8A5F;--brown:#7F4F24;--cream:#F8F6F1;--white:#FFFFFF;--text:#1a1a1a;--text-light:#4a4a4a;--shadow:0 2px 16px rgba(0,0,0,0.08)}
-
-/* ===== NAV ===== */
-nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(27,67,50,0.97);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:0.3s}
-.nav-inner{display:flex;justify-content:space-between;align-items:center;height:64px}
-.nav-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:1.15rem}
-.nav-brand-icon{width:32px;height:32px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--green-dark);flex-shrink:0}
-.nav-links{display:flex;gap:8px}
-.nav-links a{color:rgba(255,255,255,0.85);font-size:0.85rem;font-weight:500;padding:6px 14px;border-radius:6px;transition:0.2s}
-.nav-links a:hover{color:#fff;background:rgba(255,255,255,0.1)}
-.nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;padding:4px}
-@media(max-width:768px){
-  .nav-toggle{display:block}
-  .nav-links{position:fixed;top:64px;left:0;width:100%;background:rgba(27,67,50,0.98);flex-direction:column;padding:12px 20px 20px;gap:4px;transform:translateY(-110%);opacity:0;transition:0.3s;pointer-events:none}
-  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:all}
-  .nav-links a{padding:12px 14px;font-size:1rem}
-}
-
-/* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,var(--green-dark) 0%,var(--green) 60%,var(--green-med) 100%);padding:100px 0 80px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
-.hero-content{position:relative;z-index:1;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:var(--green-light);font-size:0.8rem;font-weight:600;padding:6px 18px;border-radius:50px;margin-bottom:24px;letter-spacing:0.5px;text-transform:uppercase}
-.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px;letter-spacing:-0.02em}
-.hero h1 span{color:var(--accent)}
-.hero p{font-size:clamp(1rem,1.5vw,1.2rem);color:rgba(255,255,255,0.8);max-width:600px;margin:0 auto 36px;font-weight:400}
-.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;border-radius:10px;cursor:pointer;transition:0.25s;border:none;text-align:center}
-.btn-primary{background:var(--accent);color:var(--green-dark)}
-.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,163,115,0.35)}
-.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.3)}
-.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.6);transform:translateY(-2px)}
-
-/* ===== SECTIONS ===== */
-section{padding:80px 0}
-.section-label{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
-.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;color:var(--green-dark);margin-bottom:14px;line-height:1.2}
-.section-sub{font-size:1.05rem;color:var(--text-light);max-width:640px;line-height:1.7}
-.section-header{text-align:center;margin-bottom:52px}
-.section-header .section-sub{margin:0 auto}
-
-/* ===== ABOUT ===== */
-.about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
-.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
-.stat-card{background:var(--cream);border-radius:12px;padding:24px;text-align:center;border:1px solid rgba(45,106,79,0.08)}
-.stat-number{font-size:2rem;font-weight:800;color:var(--green);line-height:1;margin-bottom:4px}
-.stat-label{font-size:0.85rem;color:var(--text-light);font-weight:500}
-.about-image{background:var(--green-pale);border-radius:16px;min-height:340px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.about-image svg{width:80%;max-width:380px;height:auto;opacity:0.7}
-@media(max-width:768px){
-  .about-grid{grid-template-columns:1fr;gap:32px}
-  .about-image{min-height:240px}
-}
-
-/* ===== SERVICES ===== */
-.services{background:var(--cream)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.service-card{background:var(--white);border-radius:14px;padding:32px 28px;border:1px solid rgba(45,106,79,0.06);transition:0.3s;box-shadow:var(--shadow)}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,0.1);border-color:rgba(45,106,79,0.12)}
-.service-icon{width:52px;height:52px;background:var(--green-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--green);font-size:1.4rem}
-.service-card h3{font-size:1.1rem;font-weight:700;color:var(--green-dark);margin-bottom:8px}
-.service-card p{font-size:0.9rem;color:var(--text-light);line-height:1.65}
-@media(max-width:900px){.services-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.services-grid{grid-template-columns:1fr}}
-
-/* ===== WHY AGRIFLITE ===== */
-.why{background:var(--green-dark);color:#fff}
-.why .section-label{color:var(--green-light)}
-.why .section-title{color:#fff}
-.why .section-sub{color:rgba(255,255,255,0.75)}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.why-card{text-align:center;padding:28px 20px;border-radius:12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);transition:0.3s}
-.why-card:hover{background:rgba(255,255,255,0.1)}
-.why-icon{font-size:2rem;margin-bottom:12px}
-.why-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px}
-.why-card p{font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.65}
-@media(max-width:768px){.why-grid{grid-template-columns:1fr;gap:16px}}
-
-/* ===== CONTACT ===== */
-.contact{background:var(--white)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.contact-info{padding-top:8px}
-.contact-info h3{font-size:1.2rem;font-weight:700;color:var(--green-dark);margin-bottom:20px}
-.contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
-.contact-detail-icon{width:40px;height:40px;background:var(--green-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--green);flex-shrink:0;font-size:1.1rem}
-.contact-detail-text{font-size:0.93rem;color:var(--text-light)}
-.contact-detail-text strong{color:var(--text);display:block;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px}
-.contact-form{background:var(--cream);border-radius:14px;padding:36px;border:1px solid rgba(45,106,79,0.06)}
-.form-group{margin-bottom:18px}
-.form-group label{display:block;font-size:0.82rem;font-weight:600;color:var(--text);margin-bottom:6px}
-.form-group input,.form-group textarea{width:100%;padding:12px 14px;font-family:'Inter',sans-serif;font-size:0.93rem;border:1.5px solid rgba(0,0,0,0.08);border-radius:8px;background:var(--white);transition:0.2s;outline:none;color:var(--text)}
-.form-group input:focus,.form-group textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(45,106,79,0.12)}
-.form-group textarea{resize:vertical;min-height:110px}
-.btn-submit{width:100%;padding:14px;background:var(--green);color:#fff;font-family:'Inter',sans-serif;font-size:1rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:0.25s}
-.btn-submit:hover{background:var(--green-dark);transform:translateY(-2px)}
-@media(max-width:768px){.contact-grid{grid-template-columns:1fr;gap:32px}.contact-form{padding:24px}}
-
-/* ===== FOOTER ===== */
-footer{background:var(--green-dark);color:rgba(255,255,255,0.7);padding:48px 0 32px;font-size:0.88rem}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
-.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.footer-brand-icon{width:28px;height:28px;background:var(--accent);border-radius:5px;display:flex;align-items:center;justify-content:center;color:var(--green-dark);font-weight:700;font-size:0.8rem}
-.footer-brand-text{color:#fff;font-weight:700;font-size:1rem}
-.footer-about p{max-width:320px;line-height:1.7}
-.footer h4{color:#fff;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
-.footer-links a{display:block;padding:4px 0;transition:0.2s}
-.footer-links a:hover{color:var(--accent)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-@media(max-width:768px){.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{flex-direction:column;text-align:center}}
-
-/* ===== UTILITIES ===== */
-.text-accent{color:var(--accent)}
-.text-green{color:var(--green)}
-.mt-8{margin-top:8px}
-.mb-8{margin-bottom:8px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agriflite Services, Inc. | Reliable in the Air, Trusted on the Ground</title>
+  <meta name="description" content="Agriflite Services, Inc. provides aerial wet application, dry application, and mosquito abatement services from Wakarusa, Indiana since 1973.">
+  <meta property="og:title" content="Agriflite Services, Inc.">
+  <meta property="og:description" content="Reliable in the Air, Trusted on the Ground since 1973.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.agriflite.com/">
+  <link rel="canonical" href="https://www.agriflite.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- ===== NAV ===== -->
-<nav id="nav">
-  <div class="container nav-inner">
-    <a href="#" class="nav-brand">
-      <span class="nav-brand-icon">AF</span>
-      Agriflite Services
-    </a>
-    <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#about" onclick="closeNav()">About</a>
-      <a href="#services" onclick="closeNav()">Services</a>
-      <a href="#why" onclick="closeNav()">Why Us</a>
-      <a href="#contact" onclick="closeNav()">Contact</a>
+  <nav class="site-nav">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html"><span class="brand-badge">AF</span> Agriflite Services</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <div class="nav-links">
+        <a class="active" href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="history.html">History</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="hero">
-  <div class="container hero-content">
-    <div class="hero-badge">Since 1973 — Wakarusa, IN</div>
-    <h1>Trusted Ag Services<br><span>Since 1973</span></h1>
-    <p>For over five decades, Agriflite Services Inc has been the backbone of the farming community in northern Indiana — delivering reliable, professional agricultural services you can count on.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Get in Touch</a>
-      <a href="#services" class="btn btn-outline">Our Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">About Us</div>
-      <h2 class="section-title">Generations of Proven Service</h2>
-      <p class="section-sub">Agriflite Services Inc has been proudly serving the agricultural community of Wakarusa and beyond since 1973. What started as a small family operation has grown into a trusted regional resource.</p>
-    </div>
-    <div class="about-grid">
+  <header class="hero">
+    <div class="container hero-grid">
       <div>
-        <p style="color:var(--text-light);margin-bottom:16px;line-height:1.7">With more than 50 years in the business, we understand the land, the seasons, and what it takes to keep a farm running smoothly. Our team brings hands-on experience and a deep commitment to quality service.</p>
-        <p style="color:var(--text-light);margin-bottom:24px;line-height:1.7">We treat every customer like family — because in a close-knit community like Wakarusa, that's exactly what you are. Whether you need custom application, crop consulting, or agronomic support, we have the expertise and equipment to get the job done right.</p>
-        <div class="about-stats">
-          <div class="stat-card"><div class="stat-number">50+</div><div class="stat-label">Years Experience</div></div>
-          <div class="stat-card"><div class="stat-number">1,000+</div><div class="stat-label">Farms Served</div></div>
-          <div class="stat-card"><div class="stat-number">5,000+</div><div class="stat-label">Acres Managed</div></div>
-          <div class="stat-card"><div class="stat-number">4th</div><div class="stat-label">Generation Family</div></div>
+        <span class="hero-badge">Since 1973 · Wakarusa, Indiana</span>
+        <h1>Reliable in the Air<br>Trusted on the Ground</h1>
+        <p>Agriflite Services, Inc. delivers professional aerial application services that protect crop health and support communities with safe, consistent, and efficient operations.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="services.html">Explore Services</a>
+          <a class="btn btn-outline" href="contact.html">Request a Quote</a>
         </div>
       </div>
-      <div class="about-image">
-        <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="40" y="120" width="320" height="160" rx="8" fill="#2D6A4F" opacity="0.15"/>
-          <rect x="60" y="100" width="280" height="180" rx="8" fill="#2D6A4F" opacity="0.25"/>
-          <path d="M200 200l-60-50h120l-60 50z" fill="#D4A373" opacity="0.6"/>
-          <rect x="140" y="60" width="120" height="20" rx="6" fill="#40916C" opacity="0.3"/>
-          <rect x="100" y="90" width="200" height="8" rx="4" fill="#40916C" opacity="0.2"/>
-          <circle cx="175" cy="200" r="4" fill="#D4A373"/>
-          <circle cx="225" cy="200" r="4" fill="#D4A373"/>
-          <rect x="130" y="240" width="140" height="10" rx="3" fill="#7F4F24" opacity="0.3"/>
-          <circle cx="80" cy="180" r="60" fill="#95D5B2" opacity="0.2"/>
-          <circle cx="320" cy="170" r="45" fill="#95D5B2" opacity="0.2"/>
-        </svg>
-      </div>
+      <aside class="hero-panel">
+        <h3>Wheels Up Across the Region</h3>
+        <p>Serving areas of Indiana, Illinois, Iowa, Wisconsin, Michigan, Ohio, and Pennsylvania.</p>
+        <div class="state-list">
+          <span>IN</span><span>IL</span><span>IA</span><span>WI</span><span>MI</span><span>OH</span><span>PA</span>
+        </div>
+      </aside>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- ===== SERVICES ===== -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Professional Ag Services</h2>
-      <p class="section-sub">We offer a full range of agricultural services to help your farm thrive — from custom application to precision agronomy.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M12 15a4 4 0 100 8 4 4 0 000-8z"/><path d="M8 5l4-3 4 3"/><path d="M18 15a6 6 0 00-12 0"/></svg>
-        </div>
-        <h3>Custom Application</h3>
-        <p>Precision fertilizer, lime, and chemical application using modern equipment for uniform coverage and maximum efficiency.</p>
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">Mission & Vision</p>
+        <h2 class="section-title">Built for Long-Term Reliability</h2>
+        <p class="section-sub">Safety is our foundation, and continuous improvement is our mindset. We combine skilled pilots, dependable aircraft, and practical technology to deliver predictable performance season after season.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2 6 4-12 4 12 2-6h4"/><path d="M12 3v4"/><path d="M6 18h12"/><path d="M8 21h8"/></svg>
-        </div>
-        <h3>Agronomy &amp; Crop Consulting</h3>
-        <p>Expert recommendations on seed selection, nutrient management, pest control, and crop rotation tailored to your fields.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7l8-4 8 4"/><path d="M4 17l8 4 8-4"/><path d="M4 12l8 4 8-4"/><path d="M12 3v10"/></svg>
-        </div>
-        <h3>Soil Testing &amp; Analysis</h3>
-        <p>Comprehensive soil sampling and lab analysis to determine exact nutrient needs and optimize your input investment.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 7v10"/><path d="M12 7v10"/><path d="M16 7v10"/></svg>
-        </div>
-        <h3>Seed &amp; Input Supply</h3>
-        <p>Quality seed, fertilizer, and crop protection products from leading manufacturers, with knowledgeable advice on every purchase.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/><path d="M8 2l-2 6"/><path d="M16 2l2 6"/></svg>
-        </div>
-        <h3>Equipment Service</h3>
-        <p>Reliable application and spreading equipment available, with regular maintenance to ensure precision and dependability in the field.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9h1"/><path d="M9 13h1"/></svg>
-        </div>
-        <h3>Grain Marketing Support</h3>
-        <p>Guidance on grain marketing strategies, storage recommendations, and market analysis to help maximize your operation's profitability.</p>
+      <div class="strip">
+        <div><strong>50+ Years</strong><span>Serving crop and land managers since 1973.</span></div>
+        <div><strong>150 Mile Radius</strong><span>Operational coverage from Wakarusa, Indiana.</span></div>
+        <div><strong>Family Owned</strong><span>Generational commitment to trusted partnerships.</span></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== WHY AGRIFLITE ===== -->
-<section class="why" id="why">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Why Agriflite</div>
-      <h2 class="section-title">Built on Trust &amp; Tradition</h2>
-      <p class="section-sub">Here's why generations of farmers in northern Indiana have chosen Agriflite Services Inc as their partner in agriculture.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🌱</div>
-        <h3>Decades of Local Knowledge</h3>
-        <p>We know Indiana soils, weather patterns, and growing conditions from decades of hands-on experience in this region.</p>
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <p class="section-kicker">Core Services</p>
+        <h2 class="section-title">Aerial Solutions That Fit the Season</h2>
       </div>
-      <div class="why-card">
-        <div class="why-icon">🤝</div>
-        <h3>Personal Relationships</h3>
-        <p>Every farmer gets one-on-one attention from our team. You're not just a number — you're a neighbor.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">⚙️</div>
-        <h3>Modern Equipment &amp; Methods</h3>
-        <p>We invest in the latest precision ag technology to deliver accurate, efficient, and sustainable results.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💚</div>
-        <h3>Commitment to Stewardship</h3>
-        <p>We practice and promote sustainable farming methods that protect the land for future generations.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">📋</div>
-        <h3>Full-Service Approach</h3>
-        <p>From soil testing through harvest support, we provide end-to-end agronomic solutions under one roof.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">⭐</div>
-        <h3>Reputation You Can Trust</h3>
-        <p>Our reputation has been built over 50+ years of honest dealings, quality work, and satisfied customers.</p>
+      <div class="cards-3">
+        <article class="card"><div class="icon">W</div><h3>Agriculture Wet Application</h3><p>Timely and precise aerial spraying for crop protection products with disciplined coverage and stewardship standards.</p></article>
+        <article class="card"><div class="icon">D</div><h3>Agriculture Dry Application</h3><p>Efficient dry product application for acres where speed, accuracy, and careful handling matter most.</p></article>
+        <article class="card"><div class="icon">M</div><h3>Mosquito Abatement</h3><p>Community-focused mosquito control operations performed safely and consistently by an experienced flight team.</p></article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Get In Touch</div>
-      <h2 class="section-title">Let's Talk About Your Farm</h2>
-      <p class="section-sub">Whether you need a quote, have a question, or want to discuss your agronomy needs — we're here to help.</p>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h3>Contact Information</h3>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div class="contact-detail-text">
-            <strong>Address</strong>
-            12345 County Road 46<br>Wakarusa, IN 46573
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
-          <div class="contact-detail-text">
-            <strong>Phone</strong>
-            <a href="tel:+15748624392" style="color:var(--green);font-weight:600">(574) 862-4392</a>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div class="contact-detail-text">
-            <strong>Email</strong>
-            <a href="mailto:info@agriflite.com" style="color:var(--green);font-weight:600">info@agriflite.com</a>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-detail-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="contact-detail-text">
-            <strong>Hours</strong>
-            Monday – Friday: 7:00 AM – 5:00 PM<br>
-            Saturday: 7:00 AM – 12:00 PM
-          </div>
-        </div>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Agriflite Services, Inc.</h4><p>Aerial application services rooted in hard work, accountability, and partnership.</p></div>
+        <div><h4>Quick Links</h4><a href="services.html">Services</a><a href="history.html">History</a><a href="team.html">Team</a></div>
+        <div><h4>Contact</h4><a href="tel:+15748624392">(574) 862-4392</a><a href="tel:+18006862474">1-800-686-2474</a><a href="contact.html">Contact Form</a></div>
       </div>
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-        <input type="hidden" name="subject" value="New Inquiry from Agriflite Website">
-        <input type="hidden" name="from_name" value="Agriflite Website Contact">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="(574) 862-4392">
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Tell us about your needs..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
+      <div class="footer-bottom"><span>&copy; 2026 Agriflite Services, Inc.</span><span>30688 CR 36, Wakarusa, IN 46573</span></div>
     </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <span class="footer-brand-icon">AF</span>
-          <span class="footer-brand-text">Agriflite Services Inc</span>
-        </div>
-        <div class="footer-about">
-          <p>Proudly serving the agricultural community of northern Indiana since 1973. Trust, quality, and a deep commitment to the farmers who feed our world.</p>
-        </div>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <div class="footer-links">
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#why">Why Agriflite</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <div class="footer-links">
-          <a href="tel:+15748624392">(574) 862-4392</a>
-          <a href="mailto:info@agriflite.com">info@agriflite.com</a>
-          <a href="#">Wakarusa, IN 46573</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Agriflite Services Inc. All rights reserved.</span>
-      <span>"Since 1973" — Serving with pride.</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ===== NAV JS ===== -->
-<script>
-function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
-function closeNav(){document.getElementById('navLinks').classList.remove('open')}
-document.addEventListener('click',function(e){var n=document.getElementById('navLinks'),t=document.querySelector('.nav-toggle');if(!n.contains(e.target)&&!t.contains(e.target)&&n.classList.contains('open'))closeNav()});
-</script>
-
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
