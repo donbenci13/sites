@@ -1,14 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Peachteq Client Sites</title>
-<style>*{margin:0;padding:0}body{background:#fafafa;font-family:sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;color:#ccc}p{font-size:.8rem}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peachteq — Custom Software & Website Development</title>
+  <meta name="description" content="Professional websites and web applications — delivered quickly at a fixed, affordable price. No agency overhead, no unnecessary complexity.">
+  <meta name="theme-color" content="#e8784a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/hub.css">
 </head>
 <body>
-<p>
-    <img src="assets/peachteq-logo-transparent.png" alt="peachteq logo" class="logo-img">
-</p>
+  <nav class="site-nav" id="siteNav" role="navigation">
+    <div class="container nav-inner">
+      <a href="#top" class="nav-logo" aria-label="Peachteq Home">
+        <img src="assets/peachteq-logo-transparent.png" alt="Peachteq">
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="https://peachteq.com/" class="nav-cta" target="_blank" rel="noopener noreferrer">Visit peachteq.com</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <span class="hero-badge">Custom Software Development</span>
+      <h1>Fast &amp; Low Cost<br><span>Website Development</span></h1>
+      <p>Professional websites and web applications — delivered quickly at a fixed, affordable price. No agency overhead, no unnecessary complexity.</p>
+      <div class="hero-actions">
+        <a href="https://peachteq.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start Your Project</a>
+        <a href="#work" class="btn btn-outline">See Our Work</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section-alt" id="work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2>Sample Client Sites</h2>
+        <p>Representative builds hosted for review and outreach.</p>
+      </div>
+      <div class="demo-grid">
+        <a href="agriflite/" class="demo-card">
+          <h3>Agriflite Services</h3>
+          <p>Aerial wet application, dry application, and mosquito abatement from Wakarusa, Indiana since 1973.</p>
+          <span class="demo-link">View site →</span>
+        </a>
+        <a href="kova/" class="demo-card">
+          <h3>Kova Fertilizer</h3>
+          <p>Crop nutrition, ag finance, retail, wholesale, and agronomy solutions from the KOVA Agribusiness Team since 1946.</p>
+          <span class="demo-link">View site →</span>
+        </a>
+        <a href="greenecrop/" class="demo-card">
+          <h3>Greene Crop Consulting</h3>
+          <p>Independent crop consulting serving Indiana farmers since 2006 — soil fertility, agronomy, crop insurance, and data management.</p>
+          <span class="demo-link">View site →</span>
+        </a>
+        <a href="texas-agriscience/" class="demo-card">
+          <h3>Texas AgriScience</h3>
+          <p>Agriculture research and contract breeding services in deep South Texas.</p>
+          <span class="demo-link">View site →</span>
+        </a>
+        <a href="covercroppartners/" class="demo-card">
+          <h3>Cover Crop Partners</h3>
+          <p>Premium cover crop seed, custom seed mixes, seeding equipment, and consultation from Shipshewana, Indiana.</p>
+          <span class="demo-link">View site →</span>
+        </a>
+        <a href="eastcentralcrop/" class="demo-card">
+          <h3>East Central Crop Service</h3>
+          <p>Crop protection, fertilizer, seed, and agronomic consulting for growers in Edwards, Illinois and the surrounding region.</p>
+          <span class="demo-link">View site →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Do</span>
+        <h2>Full-Spectrum Software Services</h2>
+        <p>End-to-end development tailored to your business — from concept to deployment and beyond.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">🌐</div>
+          <h3>Web &amp; Mobile Development</h3>
+          <p>Custom websites, progressive web apps, and native mobile applications built with modern frameworks and battle-tested architectures.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">🔗</div>
+          <h3>Third-Party Integration</h3>
+          <p>Seamlessly connect your tools — Google Workspace, Zoho, Slack, Trello, Notion, CRMs, ERPs, payment gateways, and APIs of all kinds.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Automation</h3>
+          <p>Eliminate manual work with intelligent workflows, scheduled processes, data pipelines, and custom automations that save time and reduce errors.</p>
+        </article>
+        <article class="service-card">
+          <div class="icon" aria-hidden="true">📋</div>
+          <h3>Software Workflow Implementation</h3>
+          <p>We don't just build — we teach your team how to leverage project management tools and digital systems to maximize productivity and ROI.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How We Work</span>
+        <h2>From Idea to Production, Together</h2>
+        <p>A transparent, collaborative process designed to get you the right solution — fast.</p>
+      </div>
+      <div class="process-grid">
+        <article class="process-step">
+          <span class="process-num">1</span>
+          <h3>Discovery</h3>
+          <p>We learn your business, goals, and pain points to define the right approach.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-num">2</span>
+          <h3>Design &amp; Plan</h3>
+          <p>Architecture, wireframes, and a clear roadmap — no guesswork, no surprises.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-num">3</span>
+          <h3>Build &amp; Iterate</h3>
+          <p>Agile development with regular demos so you see progress every step of the way.</p>
+        </article>
+        <article class="process-step">
+          <span class="process-num">4</span>
+          <h3>Launch &amp; Support</h3>
+          <p>Deployment, documentation, training, and ongoing support to ensure success.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Peachteq</span>
+        <h2>Technology That Works for You</h2>
+      </div>
+      <div class="about-content">
+        <p>Peachteq was founded with a simple mission: bridge the gap between ambitious businesses and the technology they need to thrive. We believe great software isn't just about code — it's about understanding real business problems and solving them with the right tools.</p>
+        <p>Whether you're a startup taking your first digital steps or an established company looking to modernize, we bring the technical expertise and product mindset to make it happen — on time, on budget, and built to last.</p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <h3>14+</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Problem Solving</p>
+        </div>
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Commitment</p>
+        </div>
+        <div class="stat-item">
+          <h3>∞</h3>
+          <p>Possibilities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2>Let's Build Something Great Together</h2>
+        <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <h3>Let's talk</h3>
+          <p>Have a project in mind? Want to explore how we can help your business go digital? Drop us a message — we'd love to hear from you.</p>
+          <div class="contact-item">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hello@peachteq.com">hello@peachteq.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon" aria-hidden="true">📍</span>
+            <div>
+              <strong>Location</strong>
+              <span>Baguio City, Philippines</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a href="https://peachteq.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Send message on peachteq.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="footer-logo" aria-label="Peachteq Home">
+        <img src="assets/peachteq-logo-transparent.png" alt="Peachteq">
+      </a>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a href="https://peachteq.com/" target="_blank" rel="noopener noreferrer">peachteq.com</a>
+      </nav>
+      <p class="footer-copy">© 2025 Peachteq. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var nav = document.getElementById('siteNav');
+      var toggle = document.getElementById('navToggle');
+      var links = document.getElementById('navLinks');
+
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+
+      links.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 8);
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
