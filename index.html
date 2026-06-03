@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="peach-light" data-layout="centered">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peachteq — Custom Software & Website Development</title>
   <meta name="description" content="Professional websites and web applications — delivered quickly at a fixed, affordable price. No agency overhead, no unnecessary complexity.">
   <meta name="theme-color" content="#e8784a">
+  <script>
+    (function () {
+      var KEY = 'peachteq-hub-theme';
+      var layouts = { 'peach-light': 'centered', 'peach-dark': 'stacked', 'field-green': 'split-right', heritage: 'showcase', coastal: 'feature-band' };
+      var id = 'peach-light';
+      try { id = localStorage.getItem(KEY) || id; } catch (e) {}
+      if (!layouts[id]) id = 'peach-light';
+      document.documentElement.dataset.theme = id;
+      document.documentElement.dataset.layout = layouts[id];
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/hub.css">
+  <link rel="stylesheet" href="assets/themes.css">
 </head>
 <body>
   <nav class="site-nav" id="siteNav" role="navigation">
@@ -26,19 +38,78 @@
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
-        <a href="https://peachteq.com/" class="nav-cta" target="_blank" rel="noopener noreferrer">Visit peachteq.com</a>
+        <button type="button" id="themeSwitch" class="nav-cta">Switch theme</button>
       </div>
     </div>
   </nav>
 
   <header class="hero" id="top">
     <div class="container hero-grid">
-      <span class="hero-badge">Custom Software Development</span>
-      <h1>Fast &amp; Low Cost<br><span>Website Development</span></h1>
-      <p>Professional websites and web applications — delivered quickly at a fixed, affordable price. No agency overhead, no unnecessary complexity.</p>
-      <div class="hero-actions">
-        <a href="https://peachteq.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start Your Project</a>
-        <a href="#work" class="btn btn-outline">See Our Work</a>
+      <div class="hero-main">
+        <span class="hero-badge">Custom Software Development</span>
+        <h1>Fast &amp; Low Cost<br><span>Website Development</span></h1>
+        <p>Professional websites and web applications — delivered quickly at a fixed, affordable price. No agency overhead, no unnecessary complexity.</p>
+        <div class="hero-actions">
+          <a href="https://peachteq.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Start Your Project</a>
+          <a href="#work" class="btn btn-outline">See Our Work</a>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-hidden="true">
+        <div class="hero-visual" data-for="field-green">
+          <img
+            src="assets/hero-field.jpg"
+            alt="Green crop field at sunrise"
+            width="640"
+            height="480"
+            loading="eager"
+            decoding="async"
+          >
+          <div class="hero-visual-caption">
+            <strong>Built for your industry</strong>
+            Sample photo placeholder — swap for your farm, facility, or team.
+          </div>
+        </div>
+      </aside>
+      <div class="hero-showcase" aria-hidden="true">
+        <div class="hero-showcase-media">
+          <img
+            src="assets/hero-heritage.jpg"
+            alt="Hands planting in rich soil"
+            width="640"
+            height="400"
+            loading="eager"
+            decoding="async"
+          >
+        </div>
+        <div class="hero-showcase-body">
+          <h3>What you get</h3>
+          <p>Fast delivery, clear pricing, and a site that fits your brand — not a generic template.</p>
+          <div class="hero-chips">
+            <span class="hero-chip">Web &amp; mobile</span>
+            <span class="hero-chip">Integrations</span>
+            <span class="hero-chip">Automation</span>
+            <span class="hero-chip">Support</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-metrics" aria-hidden="true">
+        <div class="hero-metric"><strong>14+</strong><span>Years experience</span></div>
+        <div class="hero-metric"><strong>Fixed</strong><span>Pricing model</span></div>
+        <div class="hero-metric"><strong>24/7</strong><span>Support mindset</span></div>
+      </div>
+      <div class="hero-cards" aria-hidden="true">
+        <article class="hero-card">
+          <h3>Fast delivery</h3>
+          <p>Launch-ready sites without agency timelines.</p>
+        </article>
+        <article class="hero-card">
+          <h3>Clear scope</h3>
+          <p>Fixed price, defined deliverables, no surprise invoices.</p>
+        </article>
+        <article class="hero-card">
+          <h3>Built to last</h3>
+          <p>Modern stack with room to grow as you do.</p>
+        </article>
       </div>
     </div>
   </header>
@@ -230,6 +301,7 @@
     </div>
   </footer>
 
+  <script src="assets/theme.js"></script>
   <script>
     (function () {
       var nav = document.getElementById('siteNav');

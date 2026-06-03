@@ -1,0 +1,254 @@
+/* Theme palettes — peach-light defaults live in hub.css :root */
+
+html[data-theme="peach-light"]{
+  --accent:#e8784a;
+  --accent-dark:#c45f32;
+  --accent-light:#f4a574;
+  --ink:#0f1419;
+  --slate:#4a5568;
+  --muted:#718096;
+  --bg:#f8f9fc;
+  --surface:#ffffff;
+  --surface-alt:#f8f9fc;
+  --gray-100:#eef1f6;
+  --gray-200:#dde3ec;
+  --nav-bg:rgba(255,255,255,.97);
+  --nav-border:var(--gray-200);
+  --nav-link-hover-bg:var(--gray-100);
+  --nav-toggle-color:var(--ink);
+  --footer-bg:var(--ink);
+  --hero-gradient:linear-gradient(135deg,#0f1419 0%,#1a2332 50%,#243044 100%);
+  --hero-glow-color:rgba(232,120,74,.18);
+}
+
+html[data-theme="peach-dark"]{
+  --accent:#ff9a76;
+  --accent-dark:#ff7a5c;
+  --accent-light:#ffb89a;
+  --ink:#f5f5f0;
+  --slate:#aaa;
+  --muted:#888;
+  --bg:#0e0e0e;
+  --surface:#1a1a1a;
+  --surface-alt:#141414;
+  --gray-100:#222;
+  --gray-200:#333;
+  --nav-bg:rgba(14,14,14,.92);
+  --nav-border:rgba(255,255,255,.08);
+  --nav-link-hover-bg:rgba(255,255,255,.06);
+  --nav-toggle-color:#f5f5f0;
+  --footer-bg:#0a0a0a;
+  --footer-text:rgba(245,245,240,.75);
+  --footer-muted:rgba(245,245,240,.65);
+  --footer-border:rgba(255,255,255,.08);
+  --hero-gradient:linear-gradient(135deg,#0e0e0e 0%,#1a1a1a 50%,#252525 100%);
+  --hero-glow-color:rgba(255,154,118,.22);
+  --shadow:0 4px 24px rgba(0,0,0,.35);
+  --shadow-lg:0 12px 40px rgba(0,0,0,.45);
+}
+html[data-theme="peach-dark"] .nav-links a{color:#ccc}
+html[data-theme="peach-dark"] .nav-links .nav-cta,
+html[data-theme="peach-dark"] .nav-links button.nav-cta{color:#0e0e0e!important}
+html[data-theme="peach-dark"] .section-header h2,
+html[data-theme="peach-dark"] .demo-card h3,
+html[data-theme="peach-dark"] .service-card h3,
+html[data-theme="peach-dark"] .process-step h3,
+html[data-theme="peach-dark"] .contact-info h3,
+html[data-theme="peach-dark"] .contact-item a,
+html[data-theme="peach-dark"] .contact-item span{color:var(--ink)}
+html[data-theme="peach-dark"] .demo-card,
+html[data-theme="peach-dark"] .service-card,
+html[data-theme="peach-dark"] .process-step,
+html[data-theme="peach-dark"] .stat-item{border-color:var(--gray-200)}
+
+html[data-theme="field-green"]{
+  --accent:#c8972e;
+  --accent-dark:#a67d24;
+  --accent-light:#e8c76a;
+  --ink:#0f2b0f;
+  --slate:#4a6a4a;
+  --muted:#6b8a6b;
+  --bg:#f8faf5;
+  --surface:#ffffff;
+  --surface-alt:#f0f7ef;
+  --gray-100:#e6f3e6;
+  --gray-200:#d4e4d4;
+  --nav-bg:rgba(255,255,255,.97);
+  --nav-border:var(--gray-200);
+  --footer-bg:#0f2b0f;
+  --hero-gradient:linear-gradient(135deg,#0f2b0f 0%,#1a4a1b 45%,#2d6a2e 100%);
+  --hero-glow-color:rgba(200,151,46,.2);
+}
+html[data-theme="field-green"] .nav-links .nav-cta,
+html[data-theme="field-green"] .nav-links button.nav-cta{color:#0f2b0f!important}
+
+html[data-theme="heritage"]{
+  --accent:#d4a373;
+  --accent-dark:#bb8756;
+  --accent-light:#e8c9a8;
+  --ink:#1d2a24;
+  --slate:#4b5f55;
+  --muted:#6b7f75;
+  --bg:#f7f4ee;
+  --surface:#ffffff;
+  --surface-alt:#f7f4ee;
+  --gray-100:#ebe6dc;
+  --gray-200:#d8e1db;
+  --nav-bg:rgba(23,59,47,.96);
+  --nav-border:rgba(255,255,255,.08);
+  --nav-link-hover-bg:rgba(255,255,255,.08);
+  --nav-toggle-color:#fff;
+  --footer-bg:#173b2f;
+  --hero-gradient:linear-gradient(135deg,#173b2f 0%,#1f4d3c 50%,#2d6a4f 100%);
+  --hero-glow-color:rgba(212,163,115,.18);
+}
+html[data-theme="heritage"] .nav-links a{color:rgba(255,255,255,.88)}
+html[data-theme="heritage"] .nav-links a:hover{color:#fff}
+html[data-theme="heritage"] .nav-links .nav-cta,
+html[data-theme="heritage"] .nav-links button.nav-cta{color:#173b2f!important}
+
+html[data-theme="coastal"]{
+  --accent:#5b7b4f;
+  --accent-dark:#2d6a4f;
+  --accent-light:#95b46a;
+  --ink:#1e2a25;
+  --slate:#4e5e57;
+  --muted:#6b7a73;
+  --bg:#f8f6f3;
+  --surface:#ffffff;
+  --surface-alt:#f8f6f3;
+  --gray-100:#e9efe9;
+  --gray-200:#d4e0d8;
+  --nav-bg:rgba(248,246,243,.95);
+  --nav-border:#d4e0d8;
+  --footer-bg:#173b2f;
+  --hero-gradient:linear-gradient(135deg,#e2ecdf 0%,#d9e8df 40%,#c5d9c8 100%);
+  --hero-glow-color:rgba(149,180,106,.25);
+  --hero-text:#4e5e57;
+  --hero-badge-bg:rgba(45,106,79,.1);
+  --hero-badge-border:rgba(45,106,79,.2);
+  --btn-outline-border:rgba(30,42,37,.25);
+  --btn-outline-hover-bg:rgba(30,42,37,.06);
+  --btn-outline-hover-border:rgba(30,42,37,.4);
+}
+html[data-theme="coastal"] .hero{color:var(--ink)}
+html[data-theme="coastal"] .hero h1 span{color:var(--accent-dark)}
+html[data-theme="coastal"] .hero-badge{color:var(--accent-dark)}
+html[data-theme="coastal"] .btn-outline{color:var(--ink)}
+html[data-theme="coastal"] .btn-primary{color:#fff}
+
+/* —— Layout 1: centered (peach-light) — narrow left column —— */
+html[data-layout="centered"] .hero-grid{
+  max-width:720px;
+  grid-template-columns:1fr;
+}
+html[data-layout="centered"] .hero-aside,
+html[data-layout="centered"] .hero-metrics,
+html[data-layout="centered"] .hero-cards{display:none!important}
+
+/* —— Layout 2: stacked (peach-dark) — centered copy + metric strip —— */
+html[data-layout="stacked"] .hero-grid{
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+  grid-template-columns:1fr;
+  text-align:center;
+}
+html[data-layout="stacked"] .hero-main{
+  max-width:none;
+  margin:0 auto;
+}
+html[data-layout="stacked"] .hero-badge{margin-left:auto;margin-right:auto}
+html[data-layout="stacked"] .hero p{margin-left:auto;margin-right:auto}
+html[data-layout="stacked"] .hero-actions{justify-content:center}
+html[data-layout="stacked"] .hero-aside,
+html[data-layout="stacked"] .hero-cards{display:none!important}
+html[data-layout="stacked"] .hero-metrics{
+  display:grid!important;
+}
+
+/* —— Layout 3: split-right (field-green) — copy left, image right —— */
+html[data-layout="split-right"] .hero-grid{
+  max-width:960px;
+  margin-left:auto;
+  margin-right:auto;
+  grid-template-columns:minmax(0,1fr) minmax(260px,320px);
+  gap:28px;
+  align-items:center;
+}
+html[data-layout="split-right"] .hero-main{max-width:520px}
+html[data-layout="split-right"] .hero-aside{
+  display:block;
+  width:100%;
+  max-width:320px;
+  justify-self:end;
+}
+html[data-layout="split-right"] .hero-panel{display:none!important}
+html[data-layout="split-right"] .hero-visual{display:block!important}
+html[data-layout="split-right"] .hero-metrics,
+html[data-layout="split-right"] .hero-cards{display:none!important}
+
+/* —— Layout 4: showcase (heritage) — copy on top, horizontal card below —— */
+html[data-layout="showcase"] .hero-grid{
+  max-width:880px;
+  margin-left:auto;
+  margin-right:auto;
+  grid-template-columns:1fr;
+  gap:28px;
+  align-items:start;
+}
+html[data-layout="showcase"] .hero-main{max-width:640px}
+html[data-layout="showcase"] .hero-aside,
+html[data-layout="showcase"] .hero-metrics,
+html[data-layout="showcase"] .hero-cards{display:none!important}
+html[data-layout="showcase"] .hero-showcase{display:grid!important}
+
+/* —— Layout 5: feature-band (coastal) — centered copy + card row —— */
+html[data-layout="feature-band"] .hero{
+  padding:100px 0 72px;
+}
+html[data-layout="feature-band"] .hero-grid{
+  max-width:1000px;
+  margin-left:auto;
+  margin-right:auto;
+  grid-template-columns:1fr;
+  text-align:center;
+}
+html[data-layout="feature-band"] .hero-main{max-width:680px;margin:0 auto}
+html[data-layout="feature-band"] .hero-badge{margin-left:auto;margin-right:auto}
+html[data-layout="feature-band"] .hero p{margin-left:auto;margin-right:auto}
+html[data-layout="feature-band"] .hero-actions{justify-content:center}
+html[data-layout="feature-band"] .hero-aside,
+html[data-layout="feature-band"] .hero-metrics{display:none!important}
+html[data-layout="feature-band"] .hero-cards{
+  display:grid!important;
+  max-width:100%;
+}
+
+/* Split layouts — mobile */
+@media(max-width:900px){
+  html[data-layout="split-right"] .hero-grid{
+    max-width:none;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  html[data-layout="split-right"] .hero-main{
+    max-width:none;
+    order:2;
+  }
+  html[data-layout="split-right"] .hero-aside{
+    order:1;
+    max-width:none;
+    justify-self:stretch;
+  }
+  html[data-layout="showcase"] .hero-showcase{
+    grid-template-columns:1fr;
+  }
+  html[data-layout="showcase"] .hero-showcase-media{
+    max-height:220px;
+  }
+  html[data-layout="stacked"] .hero-metrics,
+  html[data-layout="feature-band"] .hero-cards{
+    grid-template-columns:1fr;
+  }
+}
