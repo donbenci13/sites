@@ -54,11 +54,14 @@ ul{list-style:none}
 }
 .site-nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.18)}
 .nav-wrap{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700}
-.brand-badge{
-  width:34px;height:34px;border-radius:8px;background:var(--accent);
-  display:grid;place-items:center;color:var(--green-900);font-size:.85rem;font-weight:800;
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:700}
+.brand-logo{
+  height:44px;
+  width:auto;
+  display:block;
+  flex-shrink:0;
 }
+.brand-text{font-size:clamp(.9rem,2vw,1.05rem);line-height:1.2}
 .nav-toggle{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
 .nav-links{display:flex;flex-wrap:wrap;gap:8px}
 .nav-links a{
