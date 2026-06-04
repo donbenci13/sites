@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Helena Chemical Company — Agronomic Solutions for Modern Agriculture</title>
+<meta name="description" content="Helena Chemical Company delivers agronomic solutions, crop protection products, seed technologies, and application expertise to growers nationwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../theme/harvest.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232d6a4f'/%3E%3Ctext x='32' y='44' font-size='32' font-weight='800' font-family='Inter,Arial,sans-serif' text-anchor='middle' fill='%23d4a373'%3EH%3C/text%3E%3C/svg%3E">
+<style>
+  /* Helena Chemical overrides */
+  .hero { padding: 120px 0 100px; }
+  .hero-grid { grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); }
+  .hero-badge { text-transform: none; font-size: .85rem; letter-spacing: 0; }
+  .stat-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 32px; border-top: 1px solid rgba(255,255,255,.12); padding-top: 28px; }
+  .stat-item { text-align: left; }
+  .stat-item strong { display: block; font-size: 1.8rem; font-weight: 800; color: var(--accent); line-height: 1.1; }
+  .stat-item span { font-size: .82rem; color: rgba(255,255,255,.6); }
+  .service-markers { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .service-markers span { font-size: .7rem; background: rgba(212, 163, 115, .15); color: var(--accent); padding: 4px 10px; border-radius: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+  .products-list { display: grid; gap: 16px; }
+  .product-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .product-mini { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; transition: box-shadow .25s; }
+  .product-mini:hover { box-shadow: var(--shadow-lg); }
+  .product-mini h4 { color: var(--green-800); font-size: .95rem; margin-bottom: 4px; }
+  .product-mini p { font-size: .85rem; color: var(--text-soft); }
+  .section-dark .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); }
+  .section-dark .card h3 { color: #fff; }
+  .section-dark .card p { color: rgba(255,255,255,.65); }
+  @media(max-width:900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero { text-align: center; }
+    .hero-actions { justify-content: center; }
+    .stat-block { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .product-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="site-nav" id="navbar" role="navigation">
+  <div class="container nav-wrap">
+    <a href="#" class="brand">
+      <span class="brand-badge">H</span>
+      Helena Chemical
+    </a>
+    <button class="nav-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#approach">Approach</a>
+      <a href="#products">Products</a>
+      <a href="#regions">Coverage</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" style="padding:120px 0 100px;">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-badge">Agronomic Solutions for Modern Agriculture</span>
+      <h1>Helping Growers <span>Feed the Future</span></h1>
+      <p>Helena Chemical Company is a national leader in crop protection, seed, fertilizer, and application technology. From the Mississippi Delta to the Pacific Northwest, our people and products help growers maximize every acre.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Partner With Us</a>
+        <a href="#approach" class="btn btn-outline">Our Approach</a>
+      </div>
+      <div class="stat-block">
+        <div class="stat-item">
+          <strong>900+</strong>
+          <span>Agronomy Locations Nationwide</span>
+        </div>
+        <div class="stat-item">
+          <strong>65+</strong>
+          <span>Years of Industry Leadership</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-panel">
+        <h3 style="color:#fff;">Full-Service Agronomy</h3>
+        <div class="service-markers">
+          <span>Crop Protection</span>
+          <span>Seed &amp; Traits</span>
+          <span>Fertilizer</span>
+          <span>Application</span>
+          <span>Precision Ag</span>
+          <span>Sustainability</span>
+        </div>
+        <div style="margin-top:16px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px;">
+          <p style="font-size:.9rem;color:rgba(255,255,255,.7);">"At Helena, we believe in being the best partner a grower can have — from soil sampling to harvest."</p>
+          <p style="font-size:.82rem;color:var(--accent);margin-top:8px;font-weight:600;">— Helena Agronomy Team</p>
+        </div>
+      </div>
+      <div class="hero-panel" style="margin-top:16px;">
+        <h3 style="color:#fff;">Supplier Partners</h3>
+        <p style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:10px;">Working with the world's leading ag input manufacturers:</p>
+        <div class="state-list">
+          <span>Bayer Crop Science</span>
+          <span>Corteva</span>
+          <span>Syngenta</span>
+          <span>FMC</span>
+          <span>BASF</span>
+          <span>AMVAC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== VALUES STRIP ===== -->
+<section style="padding:48px 0;background:var(--green-800);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;">
+      <div><strong style="color:var(--accent);font-size:1.6rem;display:block;">1957</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem;">Founded</span></div>
+      <div><strong style="color:var(--accent);font-size:1.6rem;display:block;">3,000+</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem;">Team Members</span></div>
+      <div><strong style="color:var(--accent);font-size:1.6rem;display:block;">48</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem;">States Served</span></div>
+      <div><strong style="color:var(--accent);font-size:1.6rem;display:block;">40+</strong><span style="color:rgba(255,255,255,.6);font-size:.85rem;">Crop Categories</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPROACH ===== -->
+<section id="approach">
+  <div class="container">
+    <div class="section-head" style="text-align:center;">
+      <span class="section-kicker">Our Approach</span>
+      <h2 class="section-title">Science-Led, <span style="color:var(--accent);">Grower-Focused</span></h2>
+      <p class="section-sub" style="margin:8px auto 0;">Everything we do starts with understanding what the grower needs. From soil health to market readiness, we're there at every stage.</p>
+    </div>
+    <div class="cards-3">
+      <div class="card">
+        <div class="icon">🌱</div>
+        <h3>Prescription Agronomy</h3>
+        <p>Data-driven fertility and crop protection programs customized to each field's unique soil types, yield history, and pest pressure.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📡</div>
+        <h3>Precision Technology</h3>
+        <p>Variable rate application, drone scouting, satellite imagery, and field mapping tools that help growers make decisions with confidence.</p>
+      </div>
+      <div class="card">
+        <div class="icon">♻️</div>
+        <h3>Sustainable Stewardship</h3>
+        <p>Regenerative ag practices, carbon program support, reduced-till solutions, and responsible input management for the long haul.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section id="products" class="section-dark" style="background:var(--green-900);">
+  <div class="container">
+    <div class="section-head" style="text-align:center;">
+      <span class="section-kicker" style="color:var(--accent);">Product Portfolio</span>
+      <h2 class="section-title" style="color:#fff;">Everything the Modern <span style="color:var(--accent);">Grower Needs</span></h2>
+      <p class="section-sub" style="margin:8px auto 0;color:rgba(255,255,255,.65);">Helena's product lineup spans every category of crop inputs, backed by rigorous field testing and agronomic support.</p>
+    </div>
+    <div class="cards-3">
+      <div class="card">
+        <h3>🛡️ Crop Protection</h3>
+        <p>Herbicides, fungicides, insecticides, and adjuvants — including proprietary Helena formulations developed in-house for specific regional challenges.</p>
+      </div>
+      <div class="card">
+        <h3>🌾 Seed &amp; Traits</h3>
+        <p>Corn, soybeans, cotton, wheat, rice, sorghum, and specialty crop seed with advanced genetics. Backed by Helena's own seed research program.</p>
+      </div>
+      <div class="card">
+        <h3>🧪 Plant Nutrition</h3>
+        <p>Complete fertilizer lines including dry, liquid, and suspension formulations. Helena's custom blending program matches any soil test recommendation.</p>
+      </div>
+    </div>
+    <div class="cards-3" style="margin-top:18px;">
+      <div class="card">
+        <h3>🚁 Application Services</h3>
+        <p>Aerial and ground application using GPS-guided equipment. Variable rate technology, site-specific spraying, and 24-hour service windows during season.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Precision Platform</h3>
+        <p>Helena's proprietary ag data platform gives growers real-time field insights, application maps, and yield analytics in one dashboard.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Sustainability</h3>
+        <p>Carbon credit advisory, 4R nutrient stewardship, cover crop support, and reduced-carbon input options for growers pursuing sustainability goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGIONAL COVERAGE ===== -->
+<section id="regions" style="background:var(--white);">
+  <div class="container">
+    <div class="split-grid">
+      <div class="media-frame">
+        <div class="placeholder" style="min-height:280px;">
+          <div>
+            <div style="font-size:2.5rem;margin-bottom:8px;">🗺️</div>
+            <p style="font-size:.9rem;">900+ Locations Across the U.S.</p>
+            <p style="font-size:.8rem;">From California to the Carolinas</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="section-kicker">Nationwide Reach</span>
+          <h2 class="section-title">Wherever <span style="color:var(--accent);">Agriculture Grows</span></h2>
+        </div>
+        <p style="margin-bottom:16px;">With agronomy centers in 48 states, Helena can serve growers from small family farms to large-scale operations. Each center is staffed with local agronomists who know the soils, weather, and crops in their region.</p>
+        <div class="about-values">
+          <li>Pacific Northwest</li>
+          <li>California &amp; Desert Southwest</li>
+          <li>Great Plains &amp; Rockies</li>
+          <li>Corn Belt &amp; Midwest</li>
+          <li>Delta &amp; Southeast</li>
+          <li>Mid-Atlantic &amp; Northeast</li>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL STRIP ===== -->
+<section style="background:var(--cream);padding:52px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container" style="text-align:center;max-width:800px;">
+    <p style="font-size:1.15rem;color:var(--text-soft);line-height:1.8;font-style:italic;">"Helena has been our agronomy partner for over 15 years. Their local team knows our ground, our crops, and our goals. We trust them with every acre."</p>
+    <p style="margin-top:20px;font-weight:600;color:var(--green-800);">— Grower Partnership Since 2009</p>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head" style="text-align:center;">
+      <span class="section-kicker">Get In Touch</span>
+      <h2 class="section-title">Let's Talk About <span style="color:var(--accent);">Your Acres</span></h2>
+      <p class="section-sub" style="margin:8px auto 0;">Find your nearest Helena agronomy center or reach out to our team.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-list">
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <strong>Headquarters</strong>
+            <p>Collierville, Tennessee</p>
+            <p>Agronomy centers in all 48 states</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <strong>Corporate Office</strong>
+            <a href="tel:+19017530000">(901) 753-0000</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:info@helenachemical.com">info@helenachemical.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🌐</div>
+          <div>
+            <strong>Online</strong>
+            <a href="https://www.helenachemical.com" target="_blank" rel="noopener">helenachemical.com</a>
+          </div>
+        </div>
+      </div>
+      <form class="form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <p class="note">Send a message and a Helena agronomist in your region will reach out.</p>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="region">Your Region</label>
+          <select name="region" id="region">
+            <option value="">Select a region...</option>
+            <option>Southeast</option>
+            <option>Midwest / Corn Belt</option>
+            <option>Great Plains</option>
+            <option>Southwest / Texas</option>
+            <option>West Coast</option>
+            <option>Pacific Northwest</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Tell us about your operation and how we can help." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="color:#fff;margin-bottom:12px;">
+          <span class="brand-badge">H</span>
+          Helena Chemical Company
+        </div>
+        <p style="font-size:.88rem;max-width:360px;">Delivering agronomic solutions that help growers produce more with less. Since 1957, Helena has been a trusted partner in American agriculture.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#approach">Our Approach</a>
+        <a href="#products">Products</a>
+        <a href="#regions">Coverage</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Corporate</h4>
+        <p style="font-size:.88rem;">Collierville, TN</p>
+        <a href="tel:+19017530000">(901) 753-0000</a>
+        <a href="mailto:info@helenachemical.com">info@helenachemical.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Helena Chemical Company. All rights reserved.</span>
+      <span>Committed to American Agriculture</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  const nav = document.getElementById('navbar');
+  if (toggle) toggle.addEventListener('click', function(e) { e.stopPropagation(); navLinks.classList.toggle('open'); });
+  document.addEventListener('click', function(e) { if (!nav.contains(e.target)) navLinks.classList.remove('open'); });
+  window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 20); });
+  document.querySelectorAll('.nav-links a').forEach(function(a) {
+    a.addEventListener('click', function() { navLinks.classList.remove('open'); });
+  });
+});
+</script>
+</body>
+</html>
