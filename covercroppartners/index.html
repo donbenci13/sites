@@ -8,6 +8,7 @@
   <meta property="og:title" content="Cover Crop Partners LLC">
   <meta property="og:description" content="Your source for premium cover crop seed — cereal rye, crimson clover, hairy vetch, oats, radish, and custom mixes.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-cover.png">
   <meta property="og:url" content="https://www.covercroppartners.com/">
   <link rel="canonical" href="https://www.covercroppartners.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
       <a class="brand" href="index.html"><span class="brand-badge">CC</span> Cover Crop Partners</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <div class="nav-links">
-        <a class="active" href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+        <a class="active" href="index.html">Home</a><a href="catalog.html">Catalog</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a>
       </div>
     </div>
   </nav>
@@ -33,7 +34,7 @@
         <h1>Your Source for<br>Premium Cover Crop Seed</h1>
         <p>Cover Crop Partners LLC delivers high-quality seed, custom mixes, and expert guidance to help growers build healthier soil and more resilient operations.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="services.html">Explore Services</a>
+          <a class="btn btn-primary" href="catalog.html">Browse Catalog</a>
           <a class="btn btn-outline" href="contact.html">Request a Quote</a>
         </div>
       </div>
@@ -67,15 +68,10 @@
       <div class="section-head">
         <p class="section-kicker">Seed Offerings</p>
         <h2 class="section-title">Premium Cover Crop Seed</h2>
+        <p class="section-sub">Browse our catalog of monocultures and custom blends — 60+ species available with per-pound pricing and bulk load-out.</p>
       </div>
-      <div class="cards-3">
-        <article class="card"><div class="icon">CR</div><h3>Cereal Rye</h3><p>Fast-growing winter hardy cereal that provides excellent biomass, weed suppression, and erosion control.</p></article>
-        <article class="card"><div class="icon">CC</div><h3>Crimson Clover</h3><p>Winter annual legume that fixes nitrogen and produces vibrant red blooms. Excellent for pollinator support and green manure.</p></article>
-        <article class="card"><div class="icon">HV</div><h3>Hairy Vetch</h3><p>Cold-tolerant legume that fixes significant nitrogen. Ideal partner for cereal rye in spring termination mixes.</p></article>
-        <article class="card"><div class="icon">OT</div><h3>Oats</h3><p>Fast-establishing spring or fall cereal that produces quick ground cover and readily terminates over winter.</p></article>
-        <article class="card"><div class="icon">RD</div><h3>Radish</h3><p>Deep-tapping brassica that breaks compaction, scavenges nutrients, and provides quick fall biomass.</p></article>
-        <article class="card"><div class="icon">MX</div><h3>Custom Seed Mixes</h3><p>Bespoke blends designed around your crop rotation, soil type, and goals — from simple two-species mixes to complex multi-species cocktails.</p></article>
-      </div>
+      <div class="cards-3" id="home-products"></div>
+      <p style="text-align:center;margin-top:24px"><a class="btn btn-primary" href="catalog.html">View Full Catalog</a></p>
     </div>
   </section>
 
@@ -83,12 +79,28 @@
     <div class="container">
       <div class="footer-grid">
         <div><h4>Cover Crop Partners LLC</h4><p>Your source for premium cover crop seed. Helping growers build healthier soil from the ground up.</p></div>
-        <div><h4>Quick Links</h4><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+        <div><h4>Quick Links</h4><a href="catalog.html">Catalog</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
         <div><h4>Location</h4><span>Shipshewana, IN 46565</span><a href="contact.html">Get in Touch</a></div>
       </div>
       <div class="footer-bottom"><span>&copy; 2026 Cover Crop Partners LLC</span><span>Shipshewana, Indiana</span></div>
     </div>
   </footer>
+  <script src="js/products.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const grid = document.getElementById("home-products");
+      if (!grid || typeof PRODUCTS === "undefined") return;
+      const featured = ["cereal-rye", "crimson-clover", "hairy-vetch", "oats", "radish", "custom-mix"]
+        .map((slug) => getProduct(slug))
+        .filter(Boolean);
+      grid.innerHTML = featured.map((p) => `
+        <a class="card card--product catalog-card" href="product.html?slug=${p.slug}">
+          <div class="card-media"><img src="${p.image}" alt="${p.name} cover crop seed" width="640" height="480" loading="lazy"></div>
+          <div class="card-body"><h3>${p.name}</h3><p>${p.summary}</p><span class="card-link">View details →</span></div>
+        </a>
+      `).join("");
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
